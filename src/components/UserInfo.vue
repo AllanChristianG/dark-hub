@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import env from "../../.env"
 export default {
   data() {
     return {
@@ -13,7 +14,7 @@ export default {
   },
   computed: { },
   mounted() {
-    const headers = {"xi-api-key": "427043e1f291a4aa4259fc22879d04e9"}
+    const headers = {"xi-api-key": `${env}`}
 
     const options = {method: 'GET',  headers: headers};
     
