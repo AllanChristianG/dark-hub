@@ -19,7 +19,7 @@
 
 <script>
 // import voiceList from './voiceList.json'
-import env from "../../.env"
+// import env from "../../.env"
 export default {
   data() {
     return {
@@ -35,7 +35,7 @@ export default {
       header: {
         'Accept': 'audio/mpeg',
         'Content-Type': 'application/json',
-        'xi-api-key': `${env}`
+        'xi-api-key': `${process.env}`
       }
     };
   },

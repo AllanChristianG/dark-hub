@@ -1,11 +1,16 @@
 <template>
   <div>
     <p>User Info {{ userData }}</p>
+    <button 
+      class="fetch-user-data"
+      v-on:click="fetchUserData"
+      >Fetch user Data</button>
   </div>
 </template>
 
 <script>
-import env from "../../.env"
+// import env from "../../.env"
+
 export default {
   data() {
     return {
@@ -13,8 +18,16 @@ export default {
     };
   },
   computed: { },
+  methods: {
+    fetchUserData() {
+      console.log("FETCH USER DATA")
+    }
+  },
   mounted() {
-    const headers = {"xi-api-key": `${env}`}
+    /*eslint-disable*/
+    const apiKey = process.env.VUE_APP_XI_API_KEY
+
+    const headers = {"xi-api-key": `${apiKey}`}
 
     const options = {method: 'GET',  headers: headers};
     
