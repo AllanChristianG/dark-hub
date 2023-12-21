@@ -1,15 +1,10 @@
 <template>
   <div>
     <p>User Info {{ userData }}</p>
-    <button 
-      class="fetch-user-data"
-      v-on:click="fetchUserData"
-      >Fetch user Data</button>
   </div>
 </template>
 
 <script>
-// import env from "../../.env"
 
 export default {
   data() {
@@ -18,31 +13,22 @@ export default {
     };
   },
   computed: { },
-  methods: {
-    fetchUserData() {
-      console.log("FETCH USER DATA")
-    }
-  },
-  mounted() {
+  methods: { },
+  created() {
     /*eslint-disable*/
-    const apiKey = process.env.VUE_APP_XI_API_KEY
 
-    const headers = {"xi-api-key": `${apiKey}`}
+    const apiKey = process.env.VUE_APP_XI_API_KEY; // Assuming VUE_APP_XI_API_KEY is in the global scope
 
-    const options = {method: 'GET',  headers: headers};
-    
-    // Fetch data from the server API
+    const headers = { 'xi-api-key': apiKey };
+
+    const options = {method: 'GET', headers: headers};
+
     fetch('https://api.elevenlabs.io/v1/user', options)
       .then(response => response.json())
-      .then(data => {
-        // Set the data to the voices array
-        this.userData = data;
-        console.log("USER DATA", this.userData)
-        
-      })
-      .catch(error => console.error('Error:', error));
-  },
-};
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+  }
+}
 </script>
 
 <style scoped>
