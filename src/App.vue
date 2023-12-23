@@ -1,19 +1,19 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <VoiceList msg="Welcome to Your Vue.js App"/>
-  <UserInfo msg="AKII"/>
+  <HomeApp />
+  <UserInfo />
 
 </template>
 
 <script>
 
-import VoiceList from './components/VoiceList.vue'
+import HomeApp from './components/HomeApp.vue'
 import UserInfo from './components/UserInfo.vue'
 
 export default {
   name: 'App',
   components: {
-    VoiceList,
+    HomeApp,
     UserInfo
   }
 }
