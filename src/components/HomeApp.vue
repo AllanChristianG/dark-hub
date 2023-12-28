@@ -1,6 +1,51 @@
 <template>
   <b-container>
     <!-- Title and Tabs -->
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="65 55 150 150" 
+      width="240" 
+      height="240" 
+      style="width: 10%; height: 10%; transform: translate3d(0px, 0px, 0px);" preserveAspectRatio="xMinYMax meet">
+      <defs>
+        <clipPath id="__lottie_element_25">
+          <rect width="240" height="240" x="0" y="0"></rect>
+        </clipPath>
+        <clipPath id="__lottie_element_27">
+          <path d="M0,0 L240,0 L240,240 L0,240z"></path>
+        </clipPath>
+        <clipPath id="__lottie_element_34">
+          <path d="M0,0 L240,0 L240,240 L0,240z"></path>
+        </clipPath>
+        <clipPath id="__lottie_element_41">
+          <path d="M0,0 L240,0 L240,240 L0,240z"></path>
+        </clipPath></defs><g clip-path="url(#__lottie_element_25)">
+          <g clip-path="url(#__lottie_element_41)" style="display: block;" transform="matrix(1,0,0,1,-40.5,0)" opacity="1">
+            <g style="display: block;" transform="matrix(1,0,0,1,120,134.27017211914062)" opacity="1">
+              <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(74,93,138)" fill-opacity="1" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(74,93,138)" stroke-opacity="1" stroke-width="0" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+              </g>
+            </g>
+          </g>
+          <g clip-path="url(#__lottie_element_34)" style="display: block;" transform="matrix(1,0,0,1,0,0)" opacity="1">
+            <g style="display: block;" transform="matrix(1,0,0,1,120,126.29605102539062)" opacity="1">
+              <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(74,93,138)" fill-opacity="1" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(74,93,138)" stroke-opacity="1" stroke-width="0" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+              </g>
+            </g>
+          </g>
+          <g clip-path="url(#__lottie_element_27)" style="display: block;" transform="matrix(1,0,0,1,39.5,0)" opacity="1">
+            <g style="display: block;" transform="matrix(1,0,0,1,120,92.00798034667969)" opacity="1">
+              <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(74,93,138)" fill-opacity="1" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(74,93,138)" stroke-opacity="1" stroke-width="0" d=" M0,-15 C8.278499603271484,-15 15,-8.278499603271484 15,0 C15,8.278499603271484 8.278499603271484,15 0,15 C-8.278499603271484,15 -15,8.278499603271484 -15,0 C-15,-8.278499603271484 -8.278499603271484,-15 0,-15z"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
     <b-row class="mb-3">
       <b-col>
         <h1 class="text-center">Speech Synthesis</h1>
