@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <p>User Info {{ userData }}</p>
   </div>
@@ -33,4 +33,4 @@ export default {
 
 <style scoped>
 /* Add your component-specific styles here */
-</style>
+</style> -->

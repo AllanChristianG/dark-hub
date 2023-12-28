@@ -1,20 +1,20 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <HomeApp />
-  <UserInfo />
+  <!-- <UserInfo /> -->
 
 </template>
 
 <script>
 
 import HomeApp from './components/HomeApp.vue'
-import UserInfo from './components/UserInfo.vue'
+// import UserInfo from './components/UserInfo.vue'
 
 export default {
   name: 'App',
   components: {
     HomeApp,
-    UserInfo
+    // UserInfo
   }
 }
 </script>
