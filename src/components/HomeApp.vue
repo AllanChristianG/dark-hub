@@ -71,6 +71,21 @@
             />
           </b-col>
         </b-row>
+          <b-row>
+            <b-col sm="3" class="d-flex align-items-center">
+              <label for="apiKey-settings">Api keys</label>
+            </b-col>
+            <b-col sm="9">
+              <b-form-select
+                id="apiKey-settings"
+                v-model="activeApiKey"
+                :options="apiKeyOptions"
+                >
+              </b-form-select>
+
+          </b-col>
+        </b-row>
+
         <!-- Settings Dropdown -->
         <b-row>
           <b-col sm="3" class="d-flex align-items-center">
@@ -108,7 +123,7 @@
         <p 
           sm="1" 
           class="d-flex align-items-center"
-        >Total quota used: {{ remainingQuota }}</p>
+        >Total quota used:  {{ remainingQuota }}</p>
 
         <!-- Audio Player -->
         <div>
@@ -142,12 +157,25 @@
 
 <script>
 /* eslint-disable */
+import apiKeys from "../keys.json";
 export default {
+
   data() {
     return {
       remainingQuota: null,
-      voiceOptions: [{"value": null, text: "Please select a voice"}],
+      voiceOptions: [
+        {
+          "value": null, 
+          text: "Please select a voice"
+        }
+      ],
       activeApiKey: '',
+      apiKeyOptions: [
+        {
+          "value": null, 
+          text: "Please select a apiKey"
+        }
+      ],
       selectedVoice: null,
       textToNarrate: '',
       userInfo: {},
@@ -160,30 +188,9 @@ export default {
   },
   computed: {},
   methods: {
-    generateNarration() {
+    generateVoice() {
       // Your logic for text-to-speech generation
-      fetch(url, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(data),
-      })
-      .then(response => {
-        const fileStream = fs.createWriteStream('output.mp3');
-        const pipeline = stream.pipeline(response.body, fileStream, (err) => {
-          if (err) {
-            console.error('Pipeline failed:', err);
-            res.status(500).send('Internal server error');
-          } else {
-            console.log('Pipeline succeeded');
-            const absolutePath = path.resolve('public/index.html');
-            res.sendFile(absolutePath);
-          }
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        res.status(500).send('Internal Server Error');
-      });
+
     },
     fetchUserInfo() {
       const currentApiKey = this.activeApiKey
@@ -201,7 +208,9 @@ export default {
         .then(response => response.json())
         .then(response => 
           this.userInfo = response,
+          console.log("this.userInfo", this.userInfo),
           this.remainingQuota = this.userInfo.subscription?.character_count || 0,
+          console.log("this.remainingQuota", this.remainingQuota)
         )
         .catch(err => console.error(err));
       }
@@ -211,7 +220,7 @@ export default {
     activeApiKey: 'fetchUserInfo',
   },
 
-  created() { 
+  created() {
     fetch('https://api.elevenlabs.io/v1/voices')
       .then(response => response.json())
       .then(data => {
@@ -228,6 +237,10 @@ export default {
       })
       .catch(error => console.table('Error:', error));
     console.log("this voice options", this.voiceOptions)
+  },
+  onMounted() {
+
+    console.log("Keys.json content:", apiKeyOptions);
   }
 };
 </script>
